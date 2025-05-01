@@ -63,7 +63,6 @@ Despite being implemented in a unified Colab environment, the system is organize
 - **Key Libraries**:  
   `firebase-admin`, `matplotlib`, `collections`, `re`, `pprint`
 
-- **Version Control**: [GitHub Repository](https://github.com/EdenKantor/Oracle-Cloud-Search-System.git)
 
 ---
 
