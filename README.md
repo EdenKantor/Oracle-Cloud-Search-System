@@ -1,67 +1,79 @@
-# 🔍 BadgerSearch – Cloud-Based Oracle Crawler & Search System
+# 🔍 BadgerSearch – Oracle Cloud Search System
 
-**BadgerSearch** is a modular cloud-based search platform developed using Python in Google Colab.  
-It crawls, indexes, analyzes, and serves data from the Oracle documentation website, utilizing Firebase as the backend data store.  
-The system includes chatbot interaction, admin controls, statistical visualization, and multimedia integration.
+**BadgerSearch** is a modular cloud-based search platform developed in **Google Colab using Python**, with **Firebase** as the backend.  
+The system crawls content from the Oracle documentation site, indexes and stores it in JSON format, provides chatbot interaction, and displays useful statistics via visualizations — all designed to simulate a microservices architecture.
+
+---
+
+## 🌐 Live Notebook
+
+▶️ [Open in Google Colab](https://colab.research.google.com/drive/1pQCkM-DXVlDmNmDWWTv5PLsH19PMh875?usp=sharing)
 
 ---
 
 ## 🧩 Key Features & Modules
 
 ### 🗣️ Chatbot Module
-- Hardcoded chatbot that pulls context-relevant data from Firebase using pre-defined prompts.
-- Provides fast, formatted responses to frequently asked queries.
+- Hardcoded chatbot that provides answers to pre-defined user prompts using indexed data.
+- Pulls relevant content directly from Firebase in real time.
 
-### 🔥 Firebase Database Integration
-- Centralized management of all read/write/update/delete operations via Firebase.
-- Enables real-time data handling from Colab scripts and modules.
+### 🔥 Firebase Integration
+- Handles all database operations: storing crawled content, managing indexes, and syncing updates.
+- Serves as the real-time backend for data persistence.
 
-### 📦 JSON Analyzer
-- Reads, parses, and transforms crawled data in JSON format for processing and storage.
+### 📦 JSON Data Analyzer
+- Reads and writes JSON-formatted documents from Oracle pages.
+- Parses and structures content for efficient search and retrieval.
 
-### 🧑‍💼 Admin Panel Functionality
-- Admin logic enables management of indexed content and audio playlist entries.
-- Supports update/delete operations directly on Firebase.
+### 🧑‍💼 Admin Panel Logic
+- Enables updating and deleting indexes from the database.
+- Controls audio content list used in the embedded music player.
 
-### 📊 Statistics Module
-- Displays dynamic metrics such as:
-  - Top 10 most frequent words from Oracle content
-  - Most common search queries from users
+### 📊 Statistics Dashboard
+- Displays:
+  - Top 10 most common words in crawled content
+  - Most frequently searched user queries
+- Helps identify trends and content relevance.
 
-### 🎵 Music Playback Integration
-- Embedded audio player streams tracks directly from the project’s GitHub repository.
-- Playback functionality was implemented across all user-facing pages.
+### 🎵 Music Player
+- Streams songs hosted in the GitHub repository.
+- Built-in audio control logic for playback across all app components.
 
 ---
 
-## 🧱 Microservices Logic
+## 🧱 Simulated Microservices Architecture
 
-While developed in a single environment, the system architecture simulates microservices via modular Python notebooks/scripts:
+Despite being implemented in a unified Colab environment, the system is organized in a modular, microservice-inspired structure:
 
-1. **Oracle Crawler Service** – Extracts and structures content from Oracle documentation.
-2. **Query Search Service** – Handles user queries and retrieves relevant results from Firebase.
-3. **Visualization Service** – Generates graphs based on user behavior and data metrics.
-4. **Admin Index Management** – Allows authorized updates and deletions of indexed entries.
-5. **Chatbot Interface Service** – Responds to user prompts using stored indexed content.
+| Service                     | Description                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------|
+| Oracle Crawler              | Extracts content from Oracle site and stores it in structured JSON format. |
+| Query Handler               | Searches Firebase for matching results based on user input.                |
+| Visualization Service       | Analyzes and presents statistical metrics as graphs.                       |
+| Admin Management            | Updates/deletes index entries via admin-only logic.                        |
+| Chatbot Query Response      | Responds to predefined questions using stored data.                        |
 
 ---
 
 ## 🚀 Technologies Used
 
-- **Development Environment**: Google Colab (Python-based)
-- **Database**: Google Firebase (Realtime Database)
+- **Environment**: Google Colab (Python)
+- **Database**: Google Firebase Realtime DB
 - **Data Format**: JSON
-- **Tools**: `firebase-admin`, `matplotlib`, `collections`, custom crawlers
-- **Version Control**: GitHub
+- **Key Libraries**:  
+  `firebase-admin`, `matplotlib`, `collections`, `re`, `pprint`
+
+- **Version Control**: [GitHub Repository](https://github.com/EdenKantor/Oracle-Cloud-Search-System.git)
 
 ---
 
 ## 🧠 Lessons Learned
 
-- Built a simulated microservices system using modular Python logic inside Colab
-- Integrated Firebase as a remote database for persistent structured storage
-- Designed an interactive chatbot capable of structured responses using indexed data
-- Created real-time statistics and visualizations for content and user query trends
+- Simulated a scalable microservices architecture using modular Python logic
+- Implemented cloud database operations via Firebase
+- Developed a functioning chatbot with real-time search capabilities
+- Visualized data insights using custom graphs and analysis
+- Managed real-time audio content and admin-side data control
 
 ---
 
